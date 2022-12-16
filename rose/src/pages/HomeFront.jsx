@@ -41,7 +41,7 @@ export const HomeFront = () => {
             <form className="pt-6 gap-6 flex flex-col items-center justify-center">
               <input
                 type="text"
-                placeholder="How do I call you?"
+                placeholder="How do I call you? btw pacarku Wardani"
                 className="input input-bordered input-md w-full max-w-xs text-center"
                 value={inputValue}
                 onChange={handleChange}
