@@ -9,10 +9,9 @@ export const HomeFront = () => {
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    sessionStorage.setItem("Nama", inputValue);
-  };
+  useEffect(() => {
+    localStorage.setItem("Nama", JSON.stringify(inputValue));
+  }, [inputValue]);
 
   async function updateQuote() {
     try {
@@ -39,7 +38,7 @@ export const HomeFront = () => {
             <p className="pt-6 pb-3">{data?.content}</p>
             <cite>{data?.author}</cite>
 
-            <div className="pt-6 gap-6 flex flex-col items-center justify-center">
+            <form className="pt-6 gap-6 flex flex-col items-center justify-center">
               <input
                 type="text"
                 placeholder="How do I call you?"
@@ -47,14 +46,10 @@ export const HomeFront = () => {
                 value={inputValue}
                 onChange={handleChange}
               />
-              <button
-                type="submit"
-                onSubmit={handleSubmit}
-                className="btn btn-success"
-              >
+              <button type="submit" className="btn btn-success">
                 <Link to={"/rose"}>Lets Go!</Link>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
