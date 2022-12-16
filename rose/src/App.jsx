@@ -1,21 +1,13 @@
-import Rose from "./components/Rose";
-import Typewriter from "typewriter-effect";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { HomeFront } from "./pages/HomeFront";
+import { LandingPage } from "./pages/LandingPage";
 
 export const App = () => {
   return (
-    <>
-      <div className="h-[100vh] bg-[#E16666]">
-        <div className="font-bold text-center">
-          <Typewriter
-            options={{
-              strings: ["Hallo Semuanyaa", "ini cuma contoh"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </div>
-        <Rose />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<HomeFront />} />
+      <Route path="/rose" element={<LandingPage />} />
+    </Routes>
   );
 };
