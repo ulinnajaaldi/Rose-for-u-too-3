@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import Rose from "../components/Rose";
+import Spline from "@splinetool/react-spline";
 
 export const LandingPage = () => {
   const [inputValue, setInputValue] = useState("");
@@ -20,8 +20,8 @@ export const LandingPage = () => {
             options={{
               strings: [
                 `Hi ${inputValue}`,
-                "Love you <3",
-                "From Abang Ulinn:))",
+                "Keep pushing !!",
+                "Never give up.",
               ],
               delay: "natural",
               pauseFor: 5000,
@@ -31,7 +31,7 @@ export const LandingPage = () => {
           />
         </div>
       </div>
-      <Rose />
+      <Spline scene="https://prod.spline.design/yXQH3kWa4eKV8snA/scene.splinecode" />
     </div>
   );
 };

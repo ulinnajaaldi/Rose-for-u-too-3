@@ -37,11 +37,10 @@ export const HomeFront = () => {
             <h1 className="text-5xl font-bold">Rose Is Yours</h1>
             <p className="pt-6 pb-3">{data?.content}</p>
             <cite>{data?.author}</cite>
-
             <form className="pt-6 gap-6 flex flex-col items-center justify-center">
               <input
                 type="text"
-                placeholder="How do I call you? btw pacarku Wardani"
+                placeholder="How do I call you?"
                 className="input input-bordered input-md w-full max-w-xs text-center"
                 value={inputValue}
                 onChange={handleChange}
